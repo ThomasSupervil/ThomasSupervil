@@ -1,0 +1,28 @@
+@import './partials/reset';
+@import './partials/mixins';
+@import './partials/fonts';
+
+@import './components/magnetize-circle.scss';
+@import './components/cursor.scss';
+@import './components/menu.scss';
+
+@import './sections/top';
+@import './sections/experiences';
+
+html {
+  font-size: 62.5%;
+  color: #535353;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+main {
+  padding: 15rem 4rem;
+}
+
+// body {
+//   max-width: 1140px;
+//   margin: auto;
+// }

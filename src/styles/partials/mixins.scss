@@ -1,0 +1,26 @@
+$breakpoints: (
+  'desktop': 1281,
+  'tablet': 768,
+  'lg_mobile': 575,
+  'mobile': 0,
+);
+
+@mixin breakpoint($name: 'mobile') {
+  @if $name == 'mobile' {
+    @media (max-width: #{map-get($breakpoints, 'tablet') - 1}px) {
+      @content;
+    }
+  } @else if $name == 'desktop' {
+    @media (min-width: #{map-get($breakpoints, 'desktop')}px) {
+      @content;
+    }
+  } @else if $name == 'tablet' {
+    @media (min-width: #{map-get($breakpoints, 'tablet')}px) {
+      @content;
+    }
+  } @else if $name == 'lg_mobile' {
+    @media (min-width: #{map-get($breakpoints, 'lg_mobile')}px) {
+      @content;
+    }
+  }
+}
